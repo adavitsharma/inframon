@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: download splunkuf
+      get_url:
+         url: https://dl.grafana.com/oss/release/grafana-6.4.4.linux-amd64.tar.gz
+         dest: /home/vagrant
+         validate_certs: False
+    - name: untar file
+      unarchive:
+       src: /home/vagrant/grafana-6.4.4.linux-amd64.tar.gz
+       dest: /home/vagrant
+       remote_src: yes
+    - name: restart grafana
+      become: yes
+      shell: 
+         /home/vagrant/grafana-6.4.4/bin/grafana-server web &
+        
+        
+
