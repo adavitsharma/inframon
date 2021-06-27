@@ -16,6 +16,7 @@
       become: yes
       shell: 
          /home/vagrant/grafana-6.4.4/bin/grafana-server web &
+  # This is r\test
         
         
 
