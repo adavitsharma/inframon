@@ -6,7 +6,7 @@
       get_url:
          url: https://dl.grafana.com/oss/release/grafana-6.4.4.linux-amd64.tar.gz
          dest: /home/vagrant
-         validate_certs: False
+         validate_certs: False   #test
     - name: untar file
       unarchive:
        src: /home/vagrant/grafana-6.4.4.linux-amd64.tar.gz
