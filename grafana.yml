@@ -1,3 +1,7 @@
+# This is a inouts.conf
+# This is good
+# This is bad
+# This is good
 ---
 - hosts: all
   become: yes
